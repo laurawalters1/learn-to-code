@@ -7,7 +7,7 @@ var userChoice
 var computerChoice
 var result
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ! --------------------------------------------- ignore above this line ---------------------------------------------------------------
 
 // TODO: have a look at the functions declared below, read their descriptions, and then complete the gameplay function by calling those functions, so that the rock paper scissors game runs as stated in the requirements
 var gamePlay = ()=>{
@@ -73,9 +73,7 @@ var getUserChoice = ()=>{
 }
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// ! ignore below this line
+// ! --------------------------------------------- ignore below this line ---------------------------------------------------------------
 
 playButton.addEventListener("click", ()=>{
     gamePlay()
