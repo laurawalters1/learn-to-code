@@ -2,6 +2,15 @@ var playButton = document.getElementById("play-button")
 var predictionMessages = ["Unlikely", "Definitely", "Ask again later"]
 var chosenPredictionMessage
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// TODO: using the below functions, complete the gamePlay function so that the game runs as specified in the requirements document
+var gamePlay = () =>{
+    getUserQuestion()
+    getPredictionMessage()
+    showPredictionMessage()
+}
+
 // FUNCTION
 // This function randomly selects one of the pre-set prediction messages to give back to the user
 var getPredictionMessage = () =>{
@@ -21,13 +30,9 @@ var getUserQuestion = () =>{
     prompt('Ask a question')
 }
 
-// TODO: using the above functions, complete the gamePlay function so that the game runs as specified in the requirements document
-var gamePlay = () =>{
-    getUserQuestion()
-    getPredictionMessage()
-    showPredictionMessage()
-}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// ! ignore below this line
 playButton.addEventListener("click", ()=>{
  gamePlay()
 })
