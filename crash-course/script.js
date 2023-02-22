@@ -37,4 +37,4 @@ prompt("What's your favourite food?")
 
 var usersFavouriteFood = prompt("What's your favourite food?")
 
-alert("Great choice! I like " + usersFavouriteFood + "too!")
+alert("Great choice! I like " + usersFavouriteFood + " too!")
