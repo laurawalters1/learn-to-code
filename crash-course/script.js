@@ -33,6 +33,8 @@ var howToCallAFunction = ()=>{
 
 // TODO: call the howToCallAFunction function :)
 
+// YOUR CODE GOES HERE
+
 // ------------------- ALERTS AND PROMPTS --------------------------
 
 alert("Hey, welcome to JavaScript :)")

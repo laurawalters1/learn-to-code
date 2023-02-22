@@ -6,7 +6,6 @@ var chosenPredictionMessage
 
 // TODO: using the below functions, complete the gamePlay function so that the game runs as specified in the requirements document
 var gamePlay = () =>{
-
     // YOUR CODE GOES HERE
     getUserQuestion()
     getPredictionMessage()
