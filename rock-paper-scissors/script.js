@@ -6,6 +6,7 @@ var computerChoices = ["rock", "paper", "scissors"]
 var userChoice
 var computerChoice
 var result
+var div = document.getElementById("buttons")
 
 // ! --------------------------------------------- ignore above this line ---------------------------------------------------------------
 
@@ -61,15 +62,23 @@ var determineWinner = () =>{
 }
 
 // FUNCTION
-// This function shows the user what the computer chose
-var showComputerChoice = () =>{
+// This function shows the user what the computer chose in an alert
+var showComputerChoiceByAlert = () =>{
     alert("computer chose " + computerChoice)
 }
 
 // FUNCTION
-// This function prompts the user the input a choice out of rock, paper or scissors
-var getUserChoice = ()=>{
+// This function asks the user the input a choice out of rock, paper or scissors by prompt
+var getUserChoiceByPrompt = ()=>{
     userChoice = prompt('Please choose rock, paper or scissors and type your answer below') 
+}
+
+var showButtons = ()=>{
+
+}
+
+var hidePlayGameButton = () =>{
+
 }
 
 
