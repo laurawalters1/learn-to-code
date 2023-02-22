@@ -11,6 +11,7 @@ var result
 
 // TODO: have a look at the functions declared below, read their descriptions, and then complete the gameplay function by calling those functions, so that the rock paper scissors game runs as stated in the requirements
 var gamePlay = ()=>{
+    // YOUR CODE GOES HERE
     getUserChoice()
     checkUserChoice()
     getComputerChoice()
