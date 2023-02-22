@@ -1,16 +1,20 @@
-// Comments
-///////////////////////////////////
-// the console
+// --------------------- COMMENTS --------------------
+
+// descriptive comment here
+// ! -----------------------------
+// TODO: *todo message here*
+
+// THE CONSOLE
 
 console.log("Hey, welcome to the console!")
 
-// variables
+// -------------------- VARIABLES --------------------
 
 var myFirstVariable = "This is my first variable"
 
 console.log("The value of myFirstVariable is: " + myFirstVariable)
 
-// functions
+// -------------------- FUNCTIONS -------------------------
 
 // FUNCTION
 // This function console logs a welcome message to the user
@@ -29,7 +33,7 @@ var howToCallAFunction = ()=>{
 
 // TODO: call the howToCallAFunction function :)
 
-// alerts and prompts
+// ------------------- ALERTS AND PROMPTS --------------------------
 
 alert("Hey, welcome to JavaScript :)")
 
