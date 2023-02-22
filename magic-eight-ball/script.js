@@ -2,7 +2,7 @@ var playButton = document.getElementById("play-button")
 var predictionMessages = ["Unlikely", "Definitely", "Ask again later"]
 var chosenPredictionMessage
 
-// ! ---------------------------------------------ignore above this line ---------------------------------------------------------------
+// ! --------------------------------------------- ignore above this line ---------------------------------------------------------------
 
 // TODO: using the below functions, complete the gamePlay function so that the game runs as specified in the requirements document
 var gamePlay = () =>{
@@ -32,7 +32,7 @@ var getUserQuestion = () =>{
 }
 
 
-// ! ---------------------------------------------ignore below this line ---------------------------------------------------------------
+// ! --------------------------------------------- ignore below this line ---------------------------------------------------------------
 
 playButton.addEventListener("click", ()=>{
  gamePlay()
