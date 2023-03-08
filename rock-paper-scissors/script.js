@@ -18,15 +18,8 @@ var div = document.getElementById("buttons")
 // It is the teams job to complete this function so that it executes the game play
 var gamePlay = ()=>{
     // YOUR CODE GOES HERE
-    hidePlayGameButton()
-    getComputerChoice()
-    showButtons()
-    getUserChoiceFromButtons()
-    showComputerChoiceOnScreen()
-    determineWinner()
-    showWinnerOnScreen()
-}
 
+}
 
 // FUNCTION
 // This function shows the result of the game to the user via an alert
@@ -109,7 +102,6 @@ var getUserChoiceFromPopUp = ()=>{
     userChoice = prompt('Please choose rock, paper or scissors and type your answer below') 
     console.log("The user selected: " + userChoice)
 }
-
 
 // FUNCTION
 // This function starts the game off by showing the user the button options they have to choose from
