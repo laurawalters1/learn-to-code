@@ -11,26 +11,32 @@ var computerChoice
 var result
 var div = document.getElementById("buttons")
 
-// ! ------------------------- ignore above this line -------------------------------------
+// ! --------------------------------------------- ignore above this line ---------------------------------------------------------------
 
 // TODO: have a look at the functions declared below, read their descriptions, and then complete the gameplay function by calling those functions, so that the rock paper scissors game runs as stated in the requirements
 
-// It is the teams job to complete this function so that it executes the game play
+
 var gamePlay = ()=>{
-    // YOUR CODE GOES HERE
+    showButtons()
     hidePlayGameButton()
     getComputerChoice()
-    showButtons()
-    getUserChoiceFromButtons()
+    getUserChoiceByButtons()
     showComputerChoiceOnScreen()
-    determineWinner()
+    determineWinnerFromButtons()
     showWinnerOnScreen()
 }
 
+// FUNCTION
+// This function gets the computers choice out of rock, paper and scissors
+var getComputerChoice = ()=>{
+    var randomNumber =  Math.floor(Math.random() * 3 );
+     computerChoice = computerChoices[randomNumber]
+     console.log("The computer selected: " + computerChoice)
+}
 
 // FUNCTION
 // This function shows the result of the game to the user via an alert
-var showWinnerByPopUp = () =>{
+var showWinnerByAlert = () =>{
     alert(result)
 }
 
@@ -49,14 +55,6 @@ var showWinnerOnScreen = () =>{
 }
 
 // FUNCTION
-// This function gets the computers choice out of rock, paper and scissors
-var getComputerChoice = ()=>{
-    var randomNumber =  Math.floor(Math.random() * 3 );
-     computerChoice = computerChoices[randomNumber]
-     console.log("The computer selected: " + computerChoice)
-}
-
-// FUNCTION
 // This function checks that the user has inputted a valid option, if they have not, it asks them to select again
 var checkUserChoice = ()=>{
     if(!computerChoices.includes(userChoice)){
@@ -68,10 +66,24 @@ var checkUserChoice = ()=>{
     }
 }
 
+// FUNCTION
+// This function works out whether the user or the computer won, or whether they drew, and informs the user of the result
+var determineWinnerFromPrompt = () =>{
+    if(userChoice === computerChoice){
+        result = 'Draw!'
+        return
+    } else if (userChoice === "rock" && computerChoice === "paper" || userChoice === "scissors" && computerChoice === "rock" || userChoice === "paper" && computerChoice === "scissors"){
+        result = 'You lose!'
+        return
+    } else {
+        result = 'You win!'
+        return
+    }
+}
 
 // FUNCTION
 // This function determines whether the user won or lost based on which button they clicked
-var determineWinner = ()=>{
+var determineWinnerFromButtons = ()=>{
     options.forEach((option)=>{
         option.addEventListener('click', ()=>{
             if(userChoice === computerChoice){
@@ -87,7 +99,7 @@ var determineWinner = ()=>{
 }
 // FUNCTION
 // This function shows the user what the computer chose in an alert
-var showComputerChoiceByPopUp = () =>{
+var showComputerChoiceByAlert = () =>{
             alert("computer chose " + computerChoice)
 }
 
@@ -104,10 +116,9 @@ var showComputerChoiceOnScreen = () =>{
 }
 
 // FUNCTION
-// This function asks the user the input a choice out of rock, paper or scissors into a pop up
-var getUserChoiceFromPopUp = ()=>{
+// This function asks the user the input a choice out of rock, paper or scissors by prompt
+var getUserChoiceByPrompt = ()=>{
     userChoice = prompt('Please choose rock, paper or scissors and type your answer below') 
-    console.log("The user selected: " + userChoice)
 }
 
 
@@ -119,7 +130,7 @@ var showButtons = ()=>{
 
 // FUNCTION
 // This function gets the users choice based on which button they click
-var getUserChoiceFromButtons = () =>{
+var getUserChoiceByButtons = () =>{
     options.forEach((option)=>{
         option.addEventListener('click', (e)=>{
             userChoice = e.target.getAttribute('data-value')
@@ -136,7 +147,7 @@ var hidePlayGameButton = () => {
 
 
 
-// ! ---------------------- ignore below this line ---------------------------------
+// ! --------------------------------------------- ignore below this line ---------------------------------------------------------------
 
 playButton.addEventListener("click", ()=>{
     gamePlay()

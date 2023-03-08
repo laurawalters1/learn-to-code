@@ -3,7 +3,7 @@
 # Requirements:
 ```
 Summary:
-An interactive game that allows the user to input a question and recieve a randomly generated prediction on how likely it is to happen
+An interactive game that allows the user to input a question into a pop up and recieve a randomly generated prediction on how likely it is to happen
  ```
 
 # Planning stage:

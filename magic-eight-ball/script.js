@@ -3,37 +3,36 @@ var predictionMessages = ["Unlikely", "Definitely", "Ask again later"]
 var chosenPredictionMessage
 
 
-// ! --------------------------------------------- ignore above this line ---------------------------------------------------------------
+// ! --------------------------- ignore above this line ----------------------------------
 
-// TODO: using the below functions, complete the gamePlay function so that the game runs as specified in the requirements document
 var gamePlay = () =>{
     // YOUR CODE GOES HERE
-    getUserQuestionByPrompt()
-    getPredictionMessage()
-    showPredictionMessageByAlert()
+    getUserQuestionByPopUp()
+    generatePredictionMessage()
+    showPredictionMessageByPopUp()
 }
 
 // FUNCTION
-// This function randomly selects one of the pre-set prediction messages to give back to the user
-var getPredictionMessage = () =>{
+// This function randomly generates a prediction message to give back to the user
+var generatePredictionMessage = () =>{
     var randomNumber =  Math.floor(Math.random() * 3 );
     chosenPredictionMessage = predictionMessages[randomNumber]
 }
 
 // FUNCTION
 // This function shows the chosen prediction message to the user
-var showPredictionMessageByAlert = ()=>{
+var showPredictionMessageByPopUp = ()=>{
     alert(chosenPredictionMessage)
 }
 
 // FUNCTION
 // This function prompts the user to input a question
-var getUserQuestionByPrompt = () =>{
+var getUserQuestionByPopUp = () =>{
     prompt('Ask a question')
 }
 
 
-// ! --------------------------------------------- ignore below this line ---------------------------------------------------------------
+// ! --------------------- ignore below this line ----------------------------
 
 playButton.addEventListener("click", ()=>{
  gamePlay()
